@@ -16,7 +16,7 @@ namespace Aqar.Application.Interfaces.IRepository
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
-        Task<int> CountAsync();
+        Task<long> CountAsync(Expression<Func<T, bool>>? filter = null);
 
     }
 }

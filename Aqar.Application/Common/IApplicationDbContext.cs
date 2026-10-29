@@ -7,83 +7,65 @@ using Aqar.Domain.RealEstate;
 using Aqar.Domain.Utilities;
 using Aqar.Domain.Vouchers;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.PortableExecutable;
 
 namespace Aqar.Application.Common
 {
     public interface IApplicationDbContext
     {
-        DbSet<AllocationMethod> AllocationMethods { get; }
 
+        //Common
         DbSet<Attachment> Attachments { get; }
-
         DbSet<AuditLog> AuditLogs { get; }
+        DbSet<Currency> Currencies { get; }
+        DbSet<Setting> Settings { get; }
 
-        DbSet<ChargeType> ChargeTypes { get; }
+        //  Contracts
+        DbSet<Contract> Contracts { get; }
+        DbSet<ContractCharge> ContractCharges { get; }
 
-       DbSet<Contract> Contracts { get; }
-
-       DbSet<ContractCharge> ContractCharges { get; }
-
-       DbSet<ContractStatus> ContractStatuses { get; }
-
-       DbSet<Currency> Currencies { get; }
-
-       DbSet<ElectricityMainMeter> ElectricityMainMeters { get; }
-
-       DbSet<ElectricityMainMeterReading> ElectricityMainMeterReadings { get; }
-
-       DbSet<ElectricityUnitMeter> ElectricityUnitMeters { get; }
-
-       DbSet<ElectricityUnitReading> ElectricityUnitReadings { get; }
-
-       DbSet<ExpenseType> ExpenseTypes { get; }
-
-       DbSet<Floor> Floors { get; }
-
-       DbSet<Owner> Owners { get;}
-
-       DbSet<PaymentMethod> PaymentMethods { get; }
-
-       DbSet<PaymentTimingType> PaymentTimingTypes { get; }
-
-       DbSet<Property> Properties { get; }
-
+        //  Expenses
        DbSet<PropertyExpense> PropertyExpenses { get; }
-
-      DbSet<PropertyExpenseAllocation> PropertyExpenseAllocations { get; }
-
-       DbSet<PropertyOwner> PropertyOwners { get; }
-
+       DbSet<PropertyExpenseAllocation> PropertyExpenseAllocations { get; }
+        // Identity
        DbSet<Role> Roles { get; }
+        DbSet<Supplier> Suppliers { get; }
+        DbSet<Tenant> Tenants { get; }
+        DbSet<User> Users { get; }
 
-      DbSet<Setting> Settings { get;}
+        //  Lookups
+        DbSet<AllocationMethod> AllocationMethods { get; }
+        DbSet<ChargeType> ChargeTypes { get; }
+        DbSet<ContractStatus> ContractStatuses { get; }
+        DbSet<ExpenseType> ExpenseTypes { get; }
+        DbSet<PaymentMethod> PaymentMethods { get; }
+        DbSet<PaymentTimingType> PaymentTimingTypes { get; }
+        DbSet<UnitType> UnitTypes { get; }
+        DbSet<VoucherStatus> VoucherStatuses { get; }
+        DbSet<VoucherType> VoucherTypes { get; }
 
-      DbSet<Supplier> Suppliers { get; }
 
-      DbSet<Tenant> Tenants { get; }
+        // RealEstate
+        DbSet<Floor> Floors { get; }
+        DbSet<Owner> Owners { get; }
+        DbSet<Property> Properties { get; }
+        DbSet<PropertyOwner> PropertyOwners { get; }
+        DbSet<Unit> Units { get; }
 
-      DbSet<Unit> Units { get; }
+        //  Utilities
+        DbSet<ElectricityMainMeter> ElectricityMainMeters { get; }
+        DbSet<ElectricityMainMeterReading> ElectricityMainMeterReadings { get; }
+        DbSet<ElectricityUnitMeter> ElectricityUnitMeters { get; }
+        DbSet<ElectricityUnitReading> ElectricityUnitReadings { get; }
+        DbSet<UtilityRate> UtilityRates { get; }
+        DbSet<WaterMeter> WaterMeters { get; }
+        DbSet<WaterPurchase> WaterPurchases { get; }
+        DbSet<WaterUnitReading> WaterUnitReadings { get; }
 
-      DbSet<UnitType> UnitTypes { get; }
+        //  Vouchers
+        DbSet<Voucher> Vouchers { get; }
+        DbSet<VoucherAllocation> VoucherAllocations { get; }
 
-      DbSet<User> Users { get; }
-
-      DbSet<UtilityRate> UtilityRates { get; }
-
-      DbSet<Voucher> Vouchers { get; }
-
-      DbSet<VoucherAllocation> VoucherAllocations { get; }
-
-      DbSet<VoucherStatus> VoucherStatuses { get; }
-
-      DbSet<VoucherType> VoucherTypes { get; }
-
-      DbSet<WaterMeter> WaterMeters { get; }
-
-      DbSet<WaterPurchase> WaterPurchases { get; }
-
-      DbSet<Domain.Utilities.WaterUnitReading> WaterUnitReadings { get; }
+        // End Entity DBContext
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }

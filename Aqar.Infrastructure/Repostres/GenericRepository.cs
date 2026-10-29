@@ -27,7 +27,11 @@ namespace Aqar.Infrastructure.Repostres
 
         public async Task<int> CountAsync()
             =>await _context.Set<T>().CountAsync();
-        
+
+        public Task<long> CountAsync(Expression<Func<T, bool>>? filter = null)
+        {
+            throw new NotImplementedException();
+        }
 
         public async Task DeleteAsync(int id)
         {

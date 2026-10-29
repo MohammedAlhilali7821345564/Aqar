@@ -1,5 +1,4 @@
-﻿using Aqar.Domain.Identity;
-
+﻿
 namespace Aqar.Domain.Common;
 
 public partial class Attachment

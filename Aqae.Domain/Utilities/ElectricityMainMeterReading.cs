@@ -1,10 +1,9 @@
-﻿using Aqar.Domain.Identity;
-
+﻿
 namespace Aqar.Domain.Utilities
 {
 public partial class ElectricityMainMeterReading
     {//قراءة   للعداد الرئيسي — تحسب الاستهلاك والفاتورة.
-        public int MainReadingId { get; set; }
+    public int MainReadingId { get; set; }
 
     public int MainMeterId { get; set; }
 

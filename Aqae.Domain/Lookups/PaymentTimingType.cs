@@ -1,6 +1,3 @@
-
-using Aqar.Domain.Contracts;
-
 namespace Aqar.Domain.Lookups;
 
 public partial class PaymentTimingType

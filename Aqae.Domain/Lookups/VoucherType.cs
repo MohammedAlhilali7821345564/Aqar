@@ -1,5 +1,4 @@
 ﻿
-using Aqar.Domain.Vouchers;
 
 namespace Aqar.Domain.Lookups
 {

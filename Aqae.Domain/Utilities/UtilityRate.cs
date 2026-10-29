@@ -1,5 +1,4 @@
-﻿using Aqar.Domain.Identity;
-
+﻿
 namespace Aqar.Domain.Utilities;
 
 public partial class UtilityRate

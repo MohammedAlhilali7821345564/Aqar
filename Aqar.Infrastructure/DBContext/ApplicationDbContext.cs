@@ -15,6 +15,7 @@ using Aqar.Infrastructure.EntityConfigrtion.Identity;
 using Aqar.Infrastructure.EntityConfigrtion.Lookups;
 using Aqar.Infrastructure.EntityConfigrtion.RealEstate;
 using Aqar.Infrastructure.EntityConfigrtion.Utilities;
+using Aqar.Infrastructure.EntityConfigrtion.Vouchers;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aqar.Infrastructure.DBContext;
@@ -94,6 +95,7 @@ public partial class ApplicationDbContext : DbContext, IApplicationDbContext
             {
                 case EntityState.Added:
                     entry.Entity.CreatedAt = DateTime.UtcNow;
+
                     break;
 
                 case EntityState.Modified:
@@ -168,5 +170,9 @@ public partial class ApplicationDbContext : DbContext, IApplicationDbContext
         modelBuilder.ApplyConfiguration(new WaterMeterConfig());
         modelBuilder.ApplyConfiguration(new WaterPurchaseConfig());
         modelBuilder.ApplyConfiguration(new WaterUnitReadingConfig());
+
+        // Vouchers
+        modelBuilder.ApplyConfiguration(new VoucherAllocationConfig());
+        modelBuilder.ApplyConfiguration(new VoucherConfig());
     }
 }  

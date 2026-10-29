@@ -1,8 +1,5 @@
 ﻿
 global using System.ComponentModel.DataAnnotations;
-
-global using System.Net.Mail;
-
 global using Aqar.Domain.RealEstate;
 
 global using Aqar.Domain.Utilities;

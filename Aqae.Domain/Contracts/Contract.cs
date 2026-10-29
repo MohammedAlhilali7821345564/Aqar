@@ -1,10 +1,7 @@
-using Aqar.Domain.Expenses;
-using Aqar.Domain.Identity;
-using Aqar.Domain.Vouchers;
 
 namespace Aqar.Domain.Contracts;
 
-// عقد إيجار بين وحدة ومستأجر — يدعم: تأمين، دفعات مقدمة، تكرار الدفع، حالات الإنهاء.
+// عقد إيجار بين وحدة ومستأجر 
 public partial class Contract
 {
     public int ContractId { get; set; }

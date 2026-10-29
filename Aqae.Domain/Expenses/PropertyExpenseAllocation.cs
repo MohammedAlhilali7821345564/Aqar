@@ -1,5 +1,4 @@
-﻿using Aqar.Domain.Contracts;
-
+﻿
 namespace Aqar.Domain.Expenses
 {
     public partial class PropertyExpenseAllocation

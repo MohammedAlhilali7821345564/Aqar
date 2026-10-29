@@ -16,18 +16,18 @@
 
   <ItemGroup>
     <Folder Include="DTOs\Utilities\" />
-    <Folder Include="DTOs\Vouchers\" />
-    <Folder Include="Interfaces\IRepository\Expenses\" />
-    <Folder Include="Interfaces\IRepository\Lookups\" />
-    <Folder Include="Interfaces\IRepository\Identity\" />
-    <Folder Include="Interfaces\IRepository\Vouchers\" />
-    <Folder Include="Interfaces\IRepository\RealEstate\" />
     <Folder Include="Interfaces\IServiecs\Lookups\" />
     <Folder Include="Interfaces\IServiecs\Identity\" />
+    <Folder Include="Interfaces\IServiecs\Expenses\" />
     <Folder Include="Interfaces\IServiecs\Vouchers\" />
     <Folder Include="Interfaces\IServiecs\Utilities\" />
     <Folder Include="Interfaces\IServiecs\RealEstate\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\Expenses\" />
+    <Folder Include="Services\Identity\" />
+    <Folder Include="Services\Lookups\" />
+    <Folder Include="Services\RealEstate\" />
+    <Folder Include="Services\Utilities\" />
+    <Folder Include="Services\Vouchers\" />
   </ItemGroup>
 
 </Project>

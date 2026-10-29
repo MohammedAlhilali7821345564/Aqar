@@ -1,5 +1,4 @@
 
-using Aqar.Domain.Contracts;
 using Attachment = Aqar.Domain.Common.Attachment;
 
 namespace Aqar.Domain.Identity;
