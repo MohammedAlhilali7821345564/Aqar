@@ -1,4 +1,5 @@
-﻿using Aqar.Domain.RealEstate;
+﻿using Aqar.Domain.Lookups;
+using Aqar.Domain.RealEstate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Aqar.Application.Interfaces.IRepository.Lookups
 {
-    public interface IUnitTypeRepository:IGenericRepository<Unit>
+    public interface IUnitTypeRepository:IGenericRepository<UnitType>
     {
     }
 }

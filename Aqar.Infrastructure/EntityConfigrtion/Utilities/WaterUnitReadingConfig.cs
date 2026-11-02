@@ -56,9 +56,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Utilities
                 .HasForeignKey(d => d.ContractId)
                 .HasConstraintName("FK_WaterUnitRead_Contracts");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.WaterUnitReadings)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_WaterUnitRead_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.WaterUnitReadings)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_WaterUnitRead_CreatedBy");
 
             entity.HasOne(d => d.WaterMeter).WithMany(p => p.WaterUnitReadings)
                 .HasForeignKey(d => d.WaterMeterId)

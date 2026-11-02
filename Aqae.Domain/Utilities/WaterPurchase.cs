@@ -24,7 +24,7 @@ public partial class WaterPurchase
 
     public int? CreatedBy { get; set; }
 
-    public virtual User? CreatedByNavigation { get; set; }
+    //public virtual User? CreatedByNavigation { get; set; }
 
     public virtual Property Property { get; set; } = null!;
 

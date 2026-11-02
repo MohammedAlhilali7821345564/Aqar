@@ -57,13 +57,13 @@ namespace Aqar.Infrastructure.EntityConfigrtion.RealEstate
                 .HasColumnName("updated_at");
             entity.Property(e => e.UpdatedBy).HasColumnName("updated_by");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.UnitCreatedByNavigations)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_Units_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.UnitCreatedByNavigations)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_Units_CreatedBy");
 
-            entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.UnitDeletedByNavigations)
-                .HasForeignKey(d => d.DeletedBy)
-                .HasConstraintName("FK_Units_DeletedBy");
+            //entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.UnitDeletedByNavigations)
+            //    .HasForeignKey(d => d.DeletedBy)
+            //    .HasConstraintName("FK_Units_DeletedBy");
 
             entity.HasOne(d => d.Property).WithMany(p => p.Units)
                 .HasForeignKey(d => d.PropertyId)
@@ -75,9 +75,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.RealEstate
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Units_Types");
 
-            entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.UnitUpdatedByNavigations)
-                .HasForeignKey(d => d.UpdatedBy)
-                .HasConstraintName("FK_Units_UpdatedBy");
+            //entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.UnitUpdatedByNavigations)
+            //    .HasForeignKey(d => d.UpdatedBy)
+            //    .HasConstraintName("FK_Units_UpdatedBy");
 
             entity.HasOne(d => d.Floor).WithMany(p => p.Units)
                 .HasPrincipalKey(p => new { p.PropertyId, p.FloorId })

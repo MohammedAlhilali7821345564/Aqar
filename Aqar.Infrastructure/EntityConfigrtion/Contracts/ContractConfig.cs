@@ -62,9 +62,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Contracts
                 .HasColumnName("updated_at");
             entity.Property(e => e.UpdatedBy).HasColumnName("updated_by");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ContractCreatedByNavigations)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_Contracts_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ContractCreatedByNavigations)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_Contracts_CreatedBy");
 
             entity.HasOne(d => d.PaymentTiming).WithMany(p => p.Contracts)
                 .HasForeignKey(d => d.PaymentTimingId)
@@ -86,9 +86,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Contracts
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Contracts_Units");
 
-            entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.ContractUpdatedByNavigations)
-                .HasForeignKey(d => d.UpdatedBy)
-                .HasConstraintName("FK_Contracts_UpdatedBy");
+            //entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.ContractUpdatedByNavigations)
+            //    .HasForeignKey(d => d.UpdatedBy)
+            //    .HasConstraintName("FK_Contracts_UpdatedBy");
         }
     }
 }   

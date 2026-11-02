@@ -51,9 +51,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Expenses
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_PE_Method");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.PropertyExpenseCreatedByNavigations)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_PE_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.PropertyExpenseCreatedByNavigations)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_PE_CreatedBy");
 
             entity.HasOne(d => d.ExpenseType).WithMany(p => p.PropertyExpenses)
                 .HasForeignKey(d => d.ExpenseTypeId)
@@ -69,9 +69,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Expenses
                 .HasForeignKey(d => d.SupplierId)
                 .HasConstraintName("FK_PE_Suppliers");
 
-            entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.PropertyExpenseUpdatedByNavigations)
-                .HasForeignKey(d => d.UpdatedBy)
-                .HasConstraintName("FK_PE_UpdatedBy");
+            //entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.PropertyExpenseUpdatedByNavigations)
+            //    .HasForeignKey(d => d.UpdatedBy)
+            //    .HasConstraintName("FK_PE_UpdatedBy");
 
             entity.HasOne(d => d.Voucher).WithMany(p => p.PropertyExpenses)
                 .HasForeignKey(d => d.VoucherId)

@@ -44,9 +44,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.RealEstate
                 .HasPrecision(0)
                 .HasColumnName("updated_at");
 
-            entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.Owners)
-                .HasForeignKey(d => d.DeletedBy)
-                .HasConstraintName("FK_Owners_DeletedBy");
+            //entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.Owners)
+            //    .HasForeignKey(d => d.DeletedBy)
+            //    .HasConstraintName("FK_Owners_DeletedBy");
         }
     }
 }

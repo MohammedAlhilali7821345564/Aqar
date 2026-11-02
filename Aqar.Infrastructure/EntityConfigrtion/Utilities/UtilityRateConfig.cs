@@ -25,9 +25,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Utilities
             entity.Property(e => e.PropertyId).HasColumnName("property_id");
             entity.Property(e => e.UtilityType).HasColumnName("utility_type");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.UtilityRates)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_UR_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.UtilityRates)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_UR_CreatedBy");
 
             entity.HasOne(d => d.Property).WithMany(p => p.UtilityRates)
                 .HasForeignKey(d => d.PropertyId)

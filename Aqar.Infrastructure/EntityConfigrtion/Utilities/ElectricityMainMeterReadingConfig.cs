@@ -45,9 +45,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Utilities
                 .HasColumnName("previous_reading");
             entity.Property(e => e.ReadingDate).HasColumnName("reading_date");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ElectricityMainMeterReadings)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_ElecMainRead_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ElectricityMainMeterReadings)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_ElecMainRead_CreatedBy");
 
             entity.HasOne(d => d.MainMeter).WithMany(p => p.ElectricityMainMeterReadings)
                 .HasForeignKey(d => d.MainMeterId)

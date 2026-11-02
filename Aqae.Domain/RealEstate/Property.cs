@@ -31,9 +31,11 @@ public partial class Property:TraceEntity
 
     //public int? DeletedBy { get; set; }
 
-    public virtual User? CreatedByNavigation { get; set; }
+    //public virtual User? CreatedByNavigation { get; set; }
 
-    public virtual User? DeletedByNavigation { get; set; }
+    //public virtual User? DeletedByNavigation { get; set; }
+    //public virtual User? UpdatedByNavigation { get; set; }
+
 
     public virtual ElectricityMainMeter? ElectricityMainMeter { get; set; }
 
@@ -46,8 +48,6 @@ public partial class Property:TraceEntity
     public virtual ICollection<Setting> Settings { get; set; } = new List<Setting>();
 
     public virtual ICollection<Unit> Units { get; set; } = new List<Unit>();
-
-    public virtual User? UpdatedByNavigation { get; set; }
 
     public virtual ICollection<UtilityRate> UtilityRates { get; set; } = new List<UtilityRate>();
 

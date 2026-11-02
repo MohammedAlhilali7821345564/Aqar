@@ -45,17 +45,17 @@ namespace Aqar.Infrastructure.EntityConfigrtion.RealEstate
             .HasColumnName("updated_at");
         entity.Property(e => e.UpdatedBy).HasColumnName("updated_by");
 
-        entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.PropertyCreatedByNavigations)
-            .HasForeignKey(d => d.CreatedBy)
-            .HasConstraintName("FK_Properties_CreatedBy");
+        //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.PropertyCreatedByNavigations)
+        //    .HasForeignKey(d => d.CreatedBy)
+        //    .HasConstraintName("FK_Properties_CreatedBy");
 
-        entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.PropertyDeletedByNavigations)
-            .HasForeignKey(d => d.DeletedBy)
-            .HasConstraintName("FK_Properties_DeletedBy");
+        //entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.PropertyDeletedByNavigations)
+        //    .HasForeignKey(d => d.DeletedBy)
+        //    .HasConstraintName("FK_Properties_DeletedBy");
 
-        entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.PropertyUpdatedByNavigations)
-            .HasForeignKey(d => d.UpdatedBy)
-            .HasConstraintName("FK_Properties_UpdatedBy");
+        //entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.PropertyUpdatedByNavigations)
+        //    .HasForeignKey(d => d.UpdatedBy)
+        //    .HasConstraintName("FK_Properties_UpdatedBy");
         }
     }
 }

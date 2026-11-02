@@ -1,4 +1,6 @@
-﻿using Aqar.Application.Interfaces.IRepository.Expenses;
+﻿using Aqar.Application.Interfaces.IRepository.Common;
+using Aqar.Application.Interfaces.IRepository.Expenses;
+using Aqar.Application.Interfaces.IRepository.Identity;
 using Aqar.Application.Interfaces.IRepository.Lookups;
 using Aqar.Application.Interfaces.IRepository.RealEstate;
 using Aqar.Application.Interfaces.IRepository.Vouchers;
@@ -12,25 +14,37 @@ namespace Aqar.Application.Interfaces.IRepository
 {
     public interface IRepositoryManager
     {
+        IAttachmentRepository AttachmentRepository { get; }
+        IAuditLogRepository AuditLogRepository { get; }
+        ICurrencyRepository CurrencyRepository { get; }
+        ISettingRepository SettingRepository { get; }
         //Expense
-        IPropertyExpenseAllocationRepoistory propertyExpenseAllocationRepoistory { get; }
-        IPropertyExpenseRepoistory    propertyExpenseRepoistory { get; }
+        IPropertyExpenseAllocationRepoistory PropertyExpenseAllocationRepoistory { get; }
+        IPropertyExpenseRepoistory    PropertyExpenseRepoistory { get; }
+        //Identity
+       IRoleRopsitory RoleRopsitory { get; }
+        ISupplierRopsitory SupplierRopsitory { get; }
+        ITenantRopsitory TenantRopsitory { get; }
+        IUserRopsitory UserRopsitory { get; }
+
         // RealEstate
-        IFloorRepository floorRepository { get; }
+        IFloorRepository FloorRepository { get; }
         IOwnerRepository OwnerRepository { get; }
         IPropertyRepository PropertyRepository { get; }
-        IUnitRepository unitRepository { get; }
+        IUnitRepository UnitRepository { get; }
         //Vouchers
-        IVoucherAllocationRepository voucherAllocationRepository { get; }
-        IVoucherRepository voucherRepository { get; }
+        IVoucherAllocationRepository VoucherAllocationRepository { get; }
+        IVoucherRepository VoucherRepository { get; }
         //LookUps
-        IChargeTypeRepository chargeTypeRepository { get; }
-        IContractStatusRepository contractStatusRepository { get; }
-        IExpenseTypeRepository expenseTypeRepository { get; }
-        IPaymentMethodRepository waymentMethodRepository { get; }
-        IPaymentTimingTypeRepository waymentTimingTypeRepository { get; }
-        IUnitTypeRepository unitTypeRepository { get; }
-        IVoucherStatusRepository voucherStatusRepository { get; }
-        IVoucherTypeRepository voucherTypeRepository { get; }
+        IChargeTypeRepository ChargeTypeRepository { get; }
+        IContractStatusRepository ContractStatusRepository { get; }
+        IExpenseTypeRepository ExpenseTypeRepository { get; }
+        IPaymentMethodRepository PaymentMethodRepository { get; }
+        IPaymentTimingTypeRepository PaymentTimingTypeRepository { get; }
+        IUnitTypeRepository UnitTypeRepository { get; }
+        IVoucherStatusRepository VoucherStatusRepository { get; }
+        IVoucherTypeRepository VoucherTypeRepository { get; }
+
+        IUnitOfWork UnitOfWork { get; }
     }
 }

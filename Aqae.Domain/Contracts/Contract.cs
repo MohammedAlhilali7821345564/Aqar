@@ -47,10 +47,11 @@ public partial class Contract
     public DateTime? UpdatedAt { get; set; }
 
     public int? UpdatedBy { get; set; }
+    //public virtual User? UpdatedByNavigation { get; set; }
+
+    //public virtual User? CreatedByNavigation { get; set; }
 
     public virtual ICollection<ContractCharge> ContractCharges { get; set; } = new List<ContractCharge>();
-
-    public virtual User? CreatedByNavigation { get; set; }
 
     public virtual ICollection<ElectricityUnitReading> ElectricityUnitReadings { get; set; } = new List<ElectricityUnitReading>();
 
@@ -63,8 +64,6 @@ public partial class Contract
     public virtual Tenant Tenant { get; set; } = null!;
 
     public virtual Unit Unit { get; set; } = null!;
-
-    public virtual User? UpdatedByNavigation { get; set; }
 
     public virtual ICollection<Voucher> Vouchers { get; set; } = new List<Voucher>();
 

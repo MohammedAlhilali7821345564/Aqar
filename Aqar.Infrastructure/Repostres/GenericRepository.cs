@@ -10,14 +10,9 @@ using System.Threading.Tasks;
 
 namespace Aqar.Infrastructure.Repostres
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T>(ApplicationDbContext context) : IGenericRepository<T> where T : class
     {
-        private ApplicationDbContext _context;
-        //constractor Dbcontext
-        public GenericRepository(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        private readonly ApplicationDbContext _context = context;
 
         public async Task AddAsync(T entity)
         {//Save changed database

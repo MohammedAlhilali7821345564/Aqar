@@ -33,13 +33,13 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Vouchers
             entity.Property(e => e.BankName)
                 .HasMaxLength(100)
                 .HasColumnName("bank_name");
-            entity.Property(e => e.CancelReason)
-                .HasMaxLength(300)
-                .HasColumnName("cancel_reason");
-            entity.Property(e => e.CancelledAt)
-                .HasPrecision(0)
-                .HasColumnName("cancelled_at");
-            entity.Property(e => e.CancelledBy).HasColumnName("cancelled_by");
+            //entity.Property(e => e.CancelReason)
+            //    .HasMaxLength(300)
+            //    .HasColumnName("cancel_reason");
+            //entity.Property(e => e.CancelledAt)
+            //    .HasPrecision(0)
+            //    .HasColumnName("cancelled_at");
+            //entity.Property(e => e.CancelledBy).HasColumnName("cancelled_by");
             entity.Property(e => e.ChequeDate).HasColumnName("cheque_date");
             entity.Property(e => e.ChequeNumber)
                 .HasMaxLength(50)
@@ -73,17 +73,17 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Vouchers
                 .HasColumnName("voucher_number");
             entity.Property(e => e.VoucherTypeId).HasColumnName("voucher_type_id");
 
-            entity.HasOne(d => d.CancelledByNavigation).WithMany(p => p.VoucherCancelledByNavigations)
-                .HasForeignKey(d => d.CancelledBy)
-                .HasConstraintName("FK_Vouchers_CancelledBy");
+            //entity.HasOne(d => d.CancelledByNavigation).WithMany(p => p.VoucherCancelledByNavigations)
+            //    .HasForeignKey(d => d.CancelledBy)
+            //    .HasConstraintName("FK_Vouchers_CancelledBy");
 
-            entity.HasOne(d => d.Contract).WithMany(p => p.Vouchers)
-                .HasForeignKey(d => d.ContractId)
-                .HasConstraintName("FK_Vouchers_Contracts");
+            //entity.HasOne(d => d.Contract).WithMany(p => p.Vouchers)
+            //    .HasForeignKey(d => d.ContractId)
+            //    .HasConstraintName("FK_Vouchers_Contracts");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.VoucherCreatedByNavigations)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_Vouchers_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.VoucherCreatedByNavigations)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_Vouchers_CreatedBy");
 
             entity.HasOne(d => d.Owner).WithMany(p => p.Vouchers)
                 .HasForeignKey(d => d.OwnerId)
@@ -111,9 +111,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Vouchers
                 .HasForeignKey(d => d.TenantId)
                 .HasConstraintName("FK_Vouchers_Tenants");
 
-            entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.VoucherUpdatedByNavigations)
-                .HasForeignKey(d => d.UpdatedBy)
-                .HasConstraintName("FK_Vouchers_UpdatedBy");
+            //entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.VoucherUpdatedByNavigations)
+            //    .HasForeignKey(d => d.UpdatedBy)
+            //    .HasConstraintName("FK_Vouchers_UpdatedBy");
 
             entity.HasOne(d => d.VoucherType).WithMany(p => p.Vouchers)
                 .HasForeignKey(d => d.VoucherTypeId)

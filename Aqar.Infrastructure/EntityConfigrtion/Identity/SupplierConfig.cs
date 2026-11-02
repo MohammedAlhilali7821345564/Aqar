@@ -52,9 +52,10 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Identity
                 .HasPrecision(0)
                 .HasColumnName("updated_at");
 
-            entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.Suppliers)
-                .HasForeignKey(d => d.DeletedBy)
-                .HasConstraintName("FK_Suppliers_DeletedBy");
-        } 
+            //    entity.HasOne(d => d.DeletedByNavigation).WithMany(p => p.Suppliers)
+            //        .HasForeignKey(d => d.DeletedBy)
+            //        .HasConstraintName("FK_Suppliers_DeletedBy");
+            //} 
         }
     }
+}

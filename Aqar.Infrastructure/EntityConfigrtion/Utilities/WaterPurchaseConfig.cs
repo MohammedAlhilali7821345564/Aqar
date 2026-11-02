@@ -33,9 +33,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Utilities
             entity.Property(e => e.SupplierId).HasColumnName("supplier_id");
             entity.Property(e => e.VoucherId).HasColumnName("voucher_id");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.WaterPurchases)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK_WP_CreatedBy");
+            //entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.WaterPurchases)
+            //    .HasForeignKey(d => d.CreatedBy)
+            //    .HasConstraintName("FK_WP_CreatedBy");
 
             entity.HasOne(d => d.Property).WithMany(p => p.WaterPurchases)
                 .HasForeignKey(d => d.PropertyId)

@@ -39,11 +39,13 @@ public partial class Unit:TraceEntity
 
     //public int? DeletedBy { get; set; }
 
+    //public virtual User? CreatedByNavigation { get; set; }
+
+    //public virtual User? DeletedByNavigation { get; set; }
+    //public virtual User? UpdatedByNavigation { get; set; }
+
+
     public virtual ICollection<Contract> Contracts { get; set; } = new List<Contract>();
-
-    public virtual User? CreatedByNavigation { get; set; }
-
-    public virtual User? DeletedByNavigation { get; set; }
 
     public virtual ElectricityUnitMeter? ElectricityUnitMeter { get; set; }
 
@@ -52,8 +54,6 @@ public partial class Unit:TraceEntity
     public virtual Property Property { get; set; } = null!;
 
     public virtual UnitType UnitType { get; set; } = null!;
-
-    public virtual User? UpdatedByNavigation { get; set; }
 
     public virtual WaterMeter? WaterMeter { get; set; }
 }

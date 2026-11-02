@@ -1,6 +1,6 @@
 ﻿namespace Aqar.Domain.Vouchers
 {
-    public partial class Voucher
+    public partial class Voucher:TraceEntity
     {//السند المالي الرئيسي — يمكن ربطه بعقد أو عقار أو مستأجر أو مورد.
         public int VoucherId { get; set; }
 
@@ -36,26 +36,27 @@
 
         public byte StatusId { get; set; }
 
-        public DateTime? CancelledAt { get; set; }
+        //public DateTime? CancelledAt { get; set; }
 
-        public int? CancelledBy { get; set; }
+        //public int? CancelledBy { get; set; }
 
-        public string? CancelReason { get; set; }
+        //public string? CancelReason { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        //public DateTime CreatedAt { get; set; }
 
-        public int? CreatedBy { get; set; }
+        //public int? CreatedBy { get; set; }
 
-        public DateTime? UpdatedAt { get; set; }
+        //public DateTime? UpdatedAt { get; set; }
 
-        public int? UpdatedBy { get; set; }
+        //public int? UpdatedBy { get; set; }
 
-        public virtual User? CancelledByNavigation { get; set; }
+        //public virtual User? CancelledByNavigation { get; set; }
+        //public virtual User? CreatedByNavigation { get; set; }
+        //public virtual User? UpdatedByNavigation { get; set; }
+
+
 
         public virtual Contract? Contract { get; set; }
-
-        public virtual User? CreatedByNavigation { get; set; }
-
         public virtual Owner? Owner { get; set; }
 
         public virtual PaymentMethod PaymentMethod { get; set; } = null!;
@@ -69,8 +70,6 @@
         public virtual Supplier? Supplier { get; set; }
 
         public virtual Tenant? Tenant { get; set; }
-
-        public virtual User? UpdatedByNavigation { get; set; }
 
         public virtual ICollection<VoucherAllocation> VoucherAllocations { get; set; } = new List<VoucherAllocation>();
 

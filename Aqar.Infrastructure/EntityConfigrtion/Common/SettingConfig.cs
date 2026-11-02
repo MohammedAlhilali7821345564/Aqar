@@ -38,9 +38,9 @@ namespace Aqar.Infrastructure.EntityConfigrtion.Common
                 .HasForeignKey(d => d.DefaultPropertyId)
                 .HasConstraintName("FK_Settings_Property");
 
-            entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.Settings)
-                .HasForeignKey(d => d.UpdatedBy)
-                .HasConstraintName("FK_Settings_UpdatedBy");
+            //entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.Settings)
+            //    .HasForeignKey(d => d.UpdatedBy)
+            //    .HasConstraintName("FK_Settings_UpdatedBy");
         
         }
     }

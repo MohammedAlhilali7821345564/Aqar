@@ -20,3 +20,4 @@ namespace Aqar.Application.Interfaces.IRepository
 
     }
 }
+

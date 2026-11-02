@@ -33,18 +33,9 @@
     <Folder Include="Mapping\Expenses\" />
     <Folder Include="Mapping\Contracts\" />
     <Folder Include="Mapping\Common\" />
-    <Folder Include="Mapping\NewFolder\" />
     <Folder Include="Mapping\RealEstate\" />
     <Folder Include="Mapping\Utilities\" />
     <Folder Include="Mapping\Vouchers\" />
-    <Folder Include="Repostres\Contracts\" />
-    <Folder Include="Repostres\Expenses\" />
-    <Folder Include="Repostres\Identity\" />
-    <Folder Include="Repostres\Lookups\" />
-    <Folder Include="Repostres\NewFolder\" />
-    <Folder Include="Repostres\RealEstate\" />
-    <Folder Include="Repostres\Utilities\" />
-    <Folder Include="Repostres\Vouchers\" />
   </ItemGroup>
 
 

@@ -35,13 +35,11 @@ namespace Aqar.Domain.Utilities
         public DateTime CreatedAt { get; set; }
 
         public int? CreatedBy { get; set; }
+        //public virtual User? CreatedByNavigation { get; set; }
 
         public virtual ContractCharge? Charge { get; set; }
 
         public virtual Contract? Contract { get; set; }
-
-        public virtual User? CreatedByNavigation { get; set; }
-
         public virtual ElectricityUnitMeter UnitMeter { get; set; } = null!;
     }
 }
